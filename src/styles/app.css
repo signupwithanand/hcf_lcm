@@ -1,0 +1,92 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #ecf2ff;
+  background: radial-gradient(circle at 20% 15%, #21438f, #060b1e 58%);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 16px 14px 28px;
+  display: grid;
+  gap: 12px;
+}
+
+.panel {
+  background: rgba(6, 12, 36, 0.76);
+  border: 1px solid rgba(134, 176, 255, 0.28);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 6px 28px rgba(26, 76, 180, 0.35);
+}
+
+.hero h1 { font-size: 1.15rem; margin: 0 0 6px; }
+.hero p { margin: 6px 0; }
+.hint { color: #b5d3ff; font-size: 0.92rem; }
+
+.tower-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tower {
+  min-height: 128px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2px;
+}
+.tower p { margin: 4px 0 0; font-size: 0.78rem; color: #b7cdff; }
+
+.prime-cube { width: 52px; height: 52px; }
+.cube-glow { filter: drop-shadow(0 0 8px #72e1ff) drop-shadow(0 0 14px #7f7bff); }
+
+.controls { display: grid; gap: 8px; }
+button {
+  border: 1px solid rgba(157, 189, 255, 0.4);
+  background: linear-gradient(180deg, #285ac8, #123071);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 600;
+}
+.mode-switch { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.mode-switch .active { outline: 2px solid #8fe7ff; }
+.trap-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+
+.overlay {
+  position: sticky;
+  bottom: 10px;
+  background: rgba(8, 14, 34, 0.95);
+  border: 1px solid rgba(145, 206, 255, 0.4);
+  border-radius: 12px;
+  padding: 10px;
+}
+.overlay p { margin: 0; font-size: 0.92rem; }
+
+.mastery-wrap {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+}
+.mastery-fill {
+  background: linear-gradient(90deg, #67cbff, #9a72ff);
+  height: 100%;
+  transition: width 380ms ease;
+}
+.mastery-wrap span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
